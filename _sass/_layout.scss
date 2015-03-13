@@ -43,7 +43,8 @@
             -o-transition: text-shadow .3s, color .3s;
             transition: text-shadow .3s, color .3s;
 
-            &:hover{
+            &:hover,
+            &.activated{
                 color:#333;
                 text-shadow: 0 0 0 #aaa;
                 text-decoration: none;

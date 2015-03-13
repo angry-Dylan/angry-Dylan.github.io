@@ -21,6 +21,12 @@ layout: default
             <h2>
               <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
+
+            {% assign abstract = post.content | split:'<!-- break -->' %}
+            <p>{{ abstract | first }}</p>
+            {% if abstract.size > 1 %}
+            <p>...</p>
+            {% endif %}
           </li>
         {% endfor %}
       </ul>

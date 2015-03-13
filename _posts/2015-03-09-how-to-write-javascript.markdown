@@ -8,6 +8,8 @@ Firstly, you need a pen and a paper.
 
 Then write "j", "a", "v", "a", "s", "c", "r", "i", "p", "t" on the paper.
 
+<!-- break -->
+
 See? So fucking easy.
 
 {% highlight javascript %}
