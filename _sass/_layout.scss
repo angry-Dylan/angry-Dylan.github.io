@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
+//    border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
 
@@ -17,6 +17,7 @@
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
+    font-weight: 700;
 
     &,
     &:visited {
@@ -26,30 +27,67 @@
 
 .category-list{
     float:left;
-    margin:0;
+    margin:0 0 0 20px;
     line-height: 56px;
 
     li{
         float:left;
-        padding:0 20px;
+        margin:0 20px;
 
         a{
-            color:#fff;
-            text-shadow: 0 0 3px #444;
-            cursor: pointer;
-            -webkit-transition: text-shadow .3s, color .3s;
-            -moz-transition: text-shadow .3s, color .3s;
-            -ms-transition: text-shadow .3s, color .3s;
-            -o-transition: text-shadow .3s, color .3s;
-            transition: text-shadow .3s, color .3s;
+            font-size: 12px;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color:rgba(0,0,0,.6);
+            -webkit-transition: color .3s;
+            -moz-transition: color .3s;
+            -ms-transition: color .3s;
+            -o-transition: color .3s;
+            transition: color .3s;
 
-            &:hover,
-            &.activated{
-                color:#333;
-                text-shadow: 0 0 0 #aaa;
+            &:hover{
+                color:rgba(0,0,0,.8);
                 text-decoration: none;
             }
         }
+
+        &.activated{
+            box-shadow: 0 2px 0 #000;
+
+            a{
+                color:rgba(0,0,0,.8);
+                font-weight:700;
+            }
+        }
+
+    }
+}
+
+.about-me{
+    line-height: 30px;
+    font-size: 12px;
+    margin-top:12px;
+    float:right;
+    color:$green-color-light;
+    display: inline-block;
+    vertical-align: middle;
+    padding:0 15px;
+    border:1px solid $green-color-light;
+    border-radius: 20px;
+    -webkit-transition: color .3s, border-color .3s;
+    -moz-transition: color .3s, border-color .3s;
+    -ms-transition: color .3s, border-color .3s;
+    -o-transition: color .3s, border-color .3s;
+    transition: color .3s, border-color .3s;
+
+    &:visited{
+        color:$green-color-light;
+    }
+
+    &:hover{
+        color:$green-color;
+        border-color:$green-color;
+        text-decoration: none;
     }
 }
 
@@ -126,6 +164,7 @@
     background: -webkit-radial-gradient(#fefefe, #f8f8f8);
     line-height: 400px;
     text-align: center;
+    display: none;
 
     .logo{
         font-size:26px;
