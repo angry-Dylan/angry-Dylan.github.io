@@ -68,11 +68,11 @@
     font-size: 12px;
     margin-top:12px;
     float:right;
-    color:$green-color-light;
+    color:$green-color;
     display: inline-block;
     vertical-align: middle;
     padding:0 15px;
-    border:1px solid $green-color-light;
+    border:1px solid $green-color;
     border-radius: 20px;
     -webkit-transition: color .3s, border-color .3s;
     -moz-transition: color .3s, border-color .3s;
@@ -81,12 +81,12 @@
     transition: color .3s, border-color .3s;
 
     &:visited{
-        color:$green-color-light;
+        color:$green-color;
     }
 
     &:hover{
-        color:$green-color;
-        border-color:$green-color;
+        color:$green-color-dark;
+        border-color:$green-color-dark;
         text-decoration: none;
     }
 }
@@ -150,6 +150,48 @@
         .page-link {
             display: block;
             padding: 5px 10px;
+        }
+    }
+}
+
+/**
+ * Home
+ */
+.home-page{
+    padding-right:350px;
+    position: relative;
+
+    .home{
+        width:620px;
+        margin:0 auto;
+
+        .post-list li{
+            padding-bottom:20px;
+            border-bottom:1px solid $grey-color-light;
+        }
+    }
+
+    .side-content{
+        width:350px;
+        background: #f9f9f9;
+        position: absolute;
+        top:0;
+        bottom:0;
+        right:0;
+
+        .wrapper{
+            padding-top:40px;
+            font-size: 15px;
+            color: #828282;
+
+            ol{margin:0 0 20px;}
+
+            .title{
+                font-size: 18px;
+                font-weight: 300;
+                margin-bottom: 15px;
+                color:$text-color
+            }
         }
     }
 }
