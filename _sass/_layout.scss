@@ -5,9 +5,15 @@
 //    border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background: rgba(255,255,255,.8);
+
 
     // Positioning context for the mobile navigation icon
-    position: relative;
+//    position: relative;
     z-index: 5;
 }
 
@@ -158,8 +164,13 @@
  * Home
  */
 .home-page{
-    padding-right:350px;
-    position: relative;
+    padding:60px 350px 0 0;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow: auto;
 
     .home{
         width:620px;
@@ -171,27 +182,31 @@
         }
     }
 
-    .side-content{
-        width:350px;
-        background: #f9f9f9;
-        position: absolute;
-        top:0;
-        bottom:0;
-        right:0;
+}
 
-        .wrapper{
-            padding-top:40px;
-            font-size: 15px;
-            color: #828282;
+/**
+ * Side content
+ */
+.side-content{
+    width:350px;
+    background: #f9f9f9;
+    position: absolute;
+    top:60px;
+    bottom:0;
+    right:0;
 
-            ol{margin:0 0 20px;}
+    .wrapper{
+        padding-top:40px;
+        font-size: 15px;
+        color: #828282;
 
-            .title{
-                font-size: 18px;
-                font-weight: 300;
-                margin-bottom: 15px;
-                color:$text-color
-            }
+        ol{margin:0 0 20px;}
+
+        .title{
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 15px;
+            color:$text-color
         }
     }
 }
