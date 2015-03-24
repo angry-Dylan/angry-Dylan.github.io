@@ -88,28 +88,9 @@
             
             <p><p>最近做移动端开发，经常都需要用到animation做一些动效，特别是那些高速回旋加速无限循环拉风装逼大气奢华360度喷气加速回旋动画，根本无法单靠transition来实现。</p>
 
-<p>马上打开百度，输入’animation css3’(当然不能被人发现)。好了，看一下W3C就回想起这css属性怎样写了。</p>
-
-<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.ass</span><span class="p">{</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span><span class="n">move</span><span class="o">-</span><span class="n">your</span><span class="o">-</span><span class="n">ass</span> <span class="m">.5s</span> <span class="n">infinite</span><span class="p">;}</span>
-<span class="k">@-webkit-keyframes</span> <span class="nt">move-your-ass</span> <span class="p">{</span>
-    <span class="nt">0</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span><span class="n">translateY</span><span class="p">(</span><span class="m">0</span><span class="p">);</span><span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;}</span>
-    <span class="nt">60</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span><span class="n">translateY</span><span class="p">(</span><span class="m">-10px</span><span class="p">);</span><span class="k">opacity</span><span class="o">:</span><span class="m">1</span><span class="p">}</span>
-    <span class="nt">100</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span><span class="n">translateY</span><span class="p">(</span><span class="m">-20px</span><span class="p">);</span><span class="k">opacity</span><span class="o">:</span><span class="m">0</span><span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-
-<p>嗯，多简单，一个无限循环抽搐屁股，可是就这么就完了麽？还是加点人机杂交效果吧，用手指抚摸屁股的时候才动，挪开就停止。于是代码大概是这样写的：</p>
-
-<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">ass</span><span class="p">.</span><span class="nx">activated</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">animation</span><span class="o">:</span><span class="nx">move</span><span class="o">-</span><span class="nx">your</span><span class="o">-</span><span class="nx">ass</span> <span class="p">.</span><span class="mi">5</span><span class="nx">s</span> <span class="nx">infinite</span><span class="p">;}</span>
-<span class="err">@</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">keyframes</span> <span class="nx">move</span><span class="o">-</span><span class="nx">your</span><span class="o">-</span><span class="nx">ass</span> <span class="p">{</span>
-    <span class="mi">0</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">transform</span><span class="o">:</span><span class="nx">translateY</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="nx">opacity</span><span class="o">:</span> <span class="mi">0</span><span class="p">;}</span>
-    <span class="mi">60</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">transform</span><span class="o">:</span><span class="nx">translateY</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="nx">px</span><span class="p">);</span><span class="nx">opacity</span><span class="o">:</span><span class="mi">1</span><span class="p">}</span>
-    <span class="mi">100</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">transform</span><span class="o">:</span><span class="nx">translateY</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="nx">px</span><span class="p">);</span><span class="nx">opacity</span><span class="o">:</span><span class="mi">0</span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.ass&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;touchmove&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
-    <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;activated&#39;</span><span class="p">);</span>
-<span class="p">});</span></code></pre></div>
 </p>
+            
+            <p>...</p>
             
           </li>
           

@@ -21,7 +21,7 @@ categories: web前端
 
 嗯，多简单，一个无限循环抽搐屁股，可是就这么就完了麽？还是加点人机杂交效果吧，用手指抚摸屁股的时候才动，挪开就停止。于是代码大概是这样写的：
 
-{% highlight %}
+{% highlight javascript %}
 .ass.activated{-webkit-animation:move-your-ass .5s infinite;}
 @-webkit-keyframes move-your-ass {
     0%{-webkit-transform:translateY(0);opacity: 0;}
