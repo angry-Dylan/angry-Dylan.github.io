@@ -62,21 +62,23 @@
 </header>
 
 
-    <div class="page-content">
-  <div class="wrapper">
-    <div class="post">
+    <div class="post-page">
 
-      <header class="post-header">
-        <h1 class="post-title">坑 of animation-play-state</h1>
-        <p class="post-meta">Mar 23, 2015</p>
-      </header>
+  <div class="page-content">
+    <div class="wrapper">
+      <div class="post">
 
-      <article class="post-content">
-        <p>最近做移动端开发，经常都需要用到animation做一些动效，特别是那些高速回旋加速无限循环拉风装逼大气奢华360度喷气加速回旋动画，根本无法单靠transition来实现。</p>
+        <header class="post-header">
+          <h1 class="post-title">坑 of animation-play-state</h1>
+          <p class="post-meta">Mar 23, 2015</p>
+        </header>
+
+        <article class="post-content">
+          <p>最近做移动端开发，经常都需要用到animation做一些动效，特别是那些高速回旋加速无限循环拉风装逼大气奢华360度喷气加速回旋动画，根本无法单靠transition来实现。</p>
 
 <!-- break -->
 
-<p>马上打开百度，输入’animation css3’(当然不能被人发现)。好了，看一下W3C就回想起这css属性怎样写了。</p>
+<p>马上打开百度，输入’animation css3’(当然不能被人发现用百度而不用google)。好了，看一下W3C就回想起这css属性怎样写了。</p>
 
 <div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.ass</span><span class="p">{</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">animation</span><span class="o">:</span><span class="n">move</span><span class="o">-</span><span class="n">your</span><span class="o">-</span><span class="n">ass</span> <span class="m">.5s</span> <span class="n">infinite</span><span class="p">;}</span>
 <span class="k">@-webkit-keyframes</span> <span class="nt">move-your-ass</span> <span class="p">{</span>
@@ -101,13 +103,34 @@
     <span class="k">this</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">);</span>
 <span class="p">});</span></code></pre></div>
 
-<p>搞定，可是总有种别扭的感觉，嗯，</p>
+<p>搞定，可是总有种不太可靠的感觉，试了一下发现了个问题。手指摸它的时候的确是动了，可是挪开手之后，整个屁股恢复到最开始的状态了，这不是我想要的，
+我要的是暂停而不是停止啊。咋整呢？马上再打开百度输入’animation css3’(当然不能被人发现用百度而不用google)，再看了下W3C，发现animation有
+一个属性长这个样子 <code>animation-play-state</code> 有 <code>paused</code> <code>running</code> 两个值，貌似能用这货改变动画的状态。让我们来尝一下。</p>
 
-      </article>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="p">.</span><span class="nx">ass</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">animation</span><span class="o">:</span><span class="nx">move</span><span class="o">-</span><span class="nx">your</span><span class="o">-</span><span class="nx">ass</span> <span class="p">.</span><span class="mi">5</span><span class="nx">s</span> <span class="nx">infinite</span> <span class="nx">paused</span><span class="p">;}</span>
+<span class="err">@</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">keyframes</span> <span class="nx">move</span><span class="o">-</span><span class="nx">your</span><span class="o">-</span><span class="nx">ass</span> <span class="p">{</span>
+    <span class="mi">0</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">transform</span><span class="o">:</span><span class="nx">translateY</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="nx">opacity</span><span class="o">:</span> <span class="mi">0</span><span class="p">;}</span>
+    <span class="mi">60</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">transform</span><span class="o">:</span><span class="nx">translateY</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="nx">px</span><span class="p">);</span><span class="nx">opacity</span><span class="o">:</span><span class="mi">1</span><span class="p">}</span>
+    <span class="mi">100</span><span class="o">%</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">transform</span><span class="o">:</span><span class="nx">translateY</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="nx">px</span><span class="p">);</span><span class="nx">opacity</span><span class="o">:</span><span class="mi">0</span><span class="p">}</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nx">ass</span><span class="p">.</span><span class="nx">activated</span><span class="p">{</span><span class="o">-</span><span class="nx">webkit</span><span class="o">-</span><span class="nx">animation</span><span class="o">-</span><span class="nx">play</span><span class="o">-</span><span class="nx">state</span><span class="o">:</span><span class="nx">running</span><span class="p">}</span>
 
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.ass&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchstart&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">,</span><span class="s1">&#39;activated&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.ass&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;touchend&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">removeAttribute</span><span class="p">(</span><span class="s1">&#39;class&#39;</span><span class="p">);</span>
+<span class="p">});</span></code></pre></div>
+
+
+        </article>
+
+      </div>
     </div>
   </div>
+
 </div>
+
 
 
     <!--<footer class="site-footer">

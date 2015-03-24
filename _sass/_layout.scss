@@ -15,65 +15,76 @@
     // Positioning context for the mobile navigation icon
 //    position: relative;
     z-index: 5;
-}
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-    font-weight: 700;
+    .wrapper{
+        padding:0 350px 0 0;
+        position: relative;
 
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
-}
+        .category-list{
+            width:620px;
+            margin:0 auto;
+            height:56px;
+            line-height: 56px;
 
-.category-list{
-    float:left;
-    margin:0 0 0 20px;
-    line-height: 56px;
+            li{
+                float:left;
+                margin:0 40px 0 0;
 
-    li{
-        float:left;
-        margin:0 20px;
+                a{
+                    font-size: 12px;
+                    letter-spacing: .1em;
+                    text-transform: uppercase;
+                    color:rgba(0,0,0,.6);
+                    -webkit-transition: color .3s;
+                    -moz-transition: color .3s;
+                    -ms-transition: color .3s;
+                    -o-transition: color .3s;
+                    transition: color .3s;
 
-        a{
-            font-size: 12px;
-            letter-spacing: .1em;
-            text-transform: uppercase;
-            color:rgba(0,0,0,.6);
-            -webkit-transition: color .3s;
-            -moz-transition: color .3s;
-            -ms-transition: color .3s;
-            -o-transition: color .3s;
-            transition: color .3s;
+                    &:hover{
+                        color:rgba(0,0,0,.8);
+                        text-decoration: none;
+                    }
+                }
 
-            &:hover{
-                color:rgba(0,0,0,.8);
-                text-decoration: none;
+                &.activated{
+                    box-shadow: 0 2px 0 #000;
+
+                    a{
+                        color:rgba(0,0,0,.8);
+                        font-weight:700;
+                    }
+                }
+
             }
         }
 
-        &.activated{
-            box-shadow: 0 2px 0 #000;
+        .site-title {
+            font-size: 26px;
+            line-height: 56px;
+            letter-spacing: -1px;
+            margin-bottom: 0;
+            position:absolute;
+            top:0;
+            left:20px;
+            font-weight: 700;
 
-            a{
-                color:rgba(0,0,0,.8);
-                font-weight:700;
+            &,
+            &:visited {
+                color: $grey-color-dark;
             }
         }
-
     }
 }
+
 
 .about-me{
+    position: absolute;
+    top:50%;
+    margin-top:-16px;
+    right:30px;
     line-height: 30px;
     font-size: 12px;
-    margin-top:12px;
-    float:right;
     color:$green-color;
     display: inline-block;
     vertical-align: middle;
@@ -208,6 +219,20 @@
             margin-bottom: 15px;
             color:$text-color
         }
+
+        .friends{
+            padding-top:20px;
+
+            li{
+                margin-bottom: 5px;
+            }
+
+            .tip{
+                display: block;
+                font-size:12px;
+                color:$grey-color;
+            }
+        }
     }
 }
 
@@ -328,7 +353,8 @@
 .post-link {
 //    display: block;
     font-size: 34px;
-    color:#50585d;
+//    color:#50585d;
+    color:$text-color;
     -webkit-transition: color .3s;
     -moz-transition: color .3s;
     -ms-transition: color .3s;
@@ -336,7 +362,7 @@
     transition: color .3s;
 
     &:visited{
-        color:#50585d;
+        color:$text-color;
     }
 
     &:hover{
@@ -390,4 +416,23 @@
             font-size: 18px;
         }
     }
+}
+
+/**
+ * Post page
+ */
+.post-page{
+    padding-top:60px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow: auto;
+
+    .page-content{
+        width:800px;
+        margin:0 auto;
+    }
+
 }
