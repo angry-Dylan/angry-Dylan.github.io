@@ -17,7 +17,7 @@ layout: default
 
         <ul class="post-list">
           {% for post in site.posts %}
-          <li>
+          <li data-cat="{{ post.category }}">
             <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
             <h2>
@@ -105,5 +105,8 @@ layout: default
     </ol>
   </ul>
 </div>
+<script>
+  seajs.use('pages/index/index.js');
+</script>
 
 

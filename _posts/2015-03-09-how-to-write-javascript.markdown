@@ -2,7 +2,7 @@
 layout: post
 title:  "How to write javascript!"
 date:   2015-03-09 23:23:51
-categories: jekyll update
+category: web
 ---
 ![js](http://cms.csdnimg.cn/articlev1/uploads/allimg/110630/1445333009-3.jpg)
 

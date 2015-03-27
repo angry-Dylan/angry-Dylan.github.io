@@ -55,6 +55,10 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 i { font-style: normal; }
 
+.hide { display: none; }
+
+.prio-hide { display: none !important; }
+
 /** Site header */
 .site-header { border-bottom: 1px solid #e8e8e8; min-height: 56px; position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 255, 255, 0.8); z-index: 5; }
 .site-header .wrapper { padding: 0 350px 0 0; position: relative; }
@@ -152,6 +156,8 @@ i { font-style: normal; }
 /** Post page */
 .post-page { padding-top: 60px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; overflow: auto; }
 .post-page .page-content { width: 800px; margin: 0 auto; }
+.post-page #ds-thread #ds-reset .ds-meta { border: 0; }
+.post-page #ds-thread #ds-reset .ds-comments-info { display: none; }
 
 /** Syntax highlighting styles */
 .highlight { background: #fff; }

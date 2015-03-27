@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/">
   <link rel="alternate" type="application/rss+xml" title="Dylan's awesome blog" href="http://yourdomain.com/feed.xml" />
+  <script src="/js/sea.js"></script>
 </head>
 
 
@@ -24,12 +25,14 @@
 
     <a class="site-title" href="/">Dylan</a>
 
+    <input type="hidden" class="current-cat" value=""/>
+
     <ul class="category-list">
-      <li class="activated"><a href="javascript:;">all staff</a></li>
-      <li><a href="javascript:;">web前端</a></li>
-      <li><a href="javascript:;">ios</a></li>
-      <li><a href="javascript:;">others</a></li>
-      <li><a href="javascript:;">bullshit</a></li>
+      <li><a href="javascript:;">all staff</a></li>
+      <li><a href="javascript:;" data-cat="web">web前端</a></li>
+      <!--<li><a href="javascript:;">ios</a></li>-->
+      <li><a href="javascript:;" data-cat="others">others</a></li>
+      <!--<li><a href="javascript:;">bullshit</a></li>-->
     </ul>
 
     <a href="/" class="about-me">About me</a>
@@ -62,6 +65,10 @@
 
 </header>
 
+<script>
+  seajs.use('pages/header/index.js');
+</script>
+
 
     <div class="banner">
   <b class="logo">angry Dylan</b>
@@ -78,11 +85,11 @@
 
         <ul class="post-list">
           
-          <li>
+          <li data-cat="web">
             <span class="post-meta">Mar 23, 2015</span>
 
             <h2>
-              <a class="post-link" href="/web%E5%89%8D%E7%AB%AF/2015/03/23/%E5%9D%91-of-animation-play-state.html">坑 of animation-play-state</a>
+              <a class="post-link" href="/web/2015/03/23/%E5%9D%91-of-animation-play-state.html">坑 of animation-play-state</a>
             </h2>
 
             
@@ -94,11 +101,11 @@
             
           </li>
           
-          <li>
+          <li data-cat="web">
             <span class="post-meta">Mar 10, 2015</span>
 
             <h2>
-              <a class="post-link" href="/jekyll/update/2015/03/10/how-to-write-javascript.html">How to write javascript!</a>
+              <a class="post-link" href="/web/2015/03/10/how-to-write-javascript.html">How to write javascript!</a>
             </h2>
 
             
@@ -114,11 +121,11 @@
             
           </li>
           
-          <li>
+          <li data-cat="others">
             <span class="post-meta">Mar 10, 2015</span>
 
             <h2>
-              <a class="post-link" href="/jekyll/update/2015/03/10/welcome-to-jekyll.html">Welcome to Jekyll!</a>
+              <a class="post-link" href="/others/2015/03/10/welcome-to-jekyll.html">Welcome to Jekyll!</a>
             </h2>
 
             
@@ -205,6 +212,9 @@
     </ol>
   </ul>
 </div>
+<script>
+  seajs.use('pages/index/index.js');
+</script>
 
 
 

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://yourdomain.com/about/">
   <link rel="alternate" type="application/rss+xml" title="Dylan's awesome blog" href="http://yourdomain.com/feed.xml" />
+  <script src="/js/sea.js"></script>
 </head>
 
 
@@ -24,12 +25,14 @@
 
     <a class="site-title" href="/">Dylan</a>
 
+    <input type="hidden" class="current-cat" value=""/>
+
     <ul class="category-list">
-      <li class="activated"><a href="javascript:;">all staff</a></li>
-      <li><a href="javascript:;">web前端</a></li>
-      <li><a href="javascript:;">ios</a></li>
-      <li><a href="javascript:;">others</a></li>
-      <li><a href="javascript:;">bullshit</a></li>
+      <li><a href="javascript:;">all staff</a></li>
+      <li><a href="javascript:;" data-cat="web">web前端</a></li>
+      <!--<li><a href="javascript:;">ios</a></li>-->
+      <li><a href="javascript:;" data-cat="others">others</a></li>
+      <!--<li><a href="javascript:;">bullshit</a></li>-->
     </ul>
 
     <a href="/" class="about-me">About me</a>
@@ -61,6 +64,10 @@
   </div>
 
 </header>
+
+<script>
+  seajs.use('pages/header/index.js');
+</script>
 
 
     <div class="page-content">

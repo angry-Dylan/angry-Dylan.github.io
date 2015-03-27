@@ -2,7 +2,7 @@
 layout: post
 title: "坑 of animation-play-state"
 data: 2015-03-23 16-45-00
-categories: web前端
+category: web
 ---
 最近做移动端开发，经常都需要用到animation做一些动效，特别是那些高速回旋加速无限循环拉风装逼大气奢华360度喷气加速回旋动画，根本无法单靠transition来实现。
 
