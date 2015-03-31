@@ -19,6 +19,7 @@ html{
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased;
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
@@ -143,7 +144,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: #fff;
 }
 
 code {
