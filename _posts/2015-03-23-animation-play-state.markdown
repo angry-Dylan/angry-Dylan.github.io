@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "坑 of animation-play-state"
+title: "animation-play-state"
 data: 2015-03-23 16-45-00
 category: web
 ---
@@ -8,7 +8,7 @@ category: web
 
 <!-- break -->
 
-马上打开百度，输入'animation css3'(当然不能被人发现用百度而不用google)。好了，看一下W3C就回想起这css属性怎样写了。
+马上打开百度，输入「animation css3」。好了，看一下W3C就回想起这css属性怎样写了。
 
 {% highlight css %}
 .ass{-webkit-animation:move-your-ass .5s infinite;}
@@ -38,7 +38,7 @@ document.querySelector('.ass').addEventListener('touchend',function(){
 {% endhighlight %}
 
 搞定，可是总有种不太可靠的感觉，试了一下发现了个问题。手指摸它的时候的确是动了，可是挪开手之后，整个屁股恢复到最开始的状态了，这不是我想要的，
-我要的是暂停而不是停止啊。咋整呢？马上再打开百度输入'animation css3'(当然不能被人发现用百度而不用google)，再看了下W3C，发现animation有
+我要的是暂停而不是停止啊。咋整呢？马上再打开百度输入「animation css3」，再看了下W3C，发现animation有
 一个属性长这个样子 `animation-play-state` 有 `paused` `running` 两个值，貌似能用这货改变动画的状态。让我们来尝一下。
 
 {% highlight javascript %}
@@ -57,5 +57,8 @@ document.querySelector('.ass').addEventListener('touchend',function(){
     this.removeAttribute('class');
 });
 {% endhighlight %}
+
+完美！！
+
 
 

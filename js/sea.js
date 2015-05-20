@@ -859,7 +859,8 @@ seajs.config({
     tmpl: 'lib/tmpl/index.js',
     cookie: 'lib/cookie/index.js',
     util: 'lib/util/index.js',
-    fastclick: 'lib/fastclick/index.js'
+    fastclick: 'lib/fastclick/index.js',
+    qrcode: 'lib/qrcode/index.js'
   }
 });
 

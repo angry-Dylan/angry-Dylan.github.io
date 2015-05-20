@@ -6,17 +6,17 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 31 Mar 2015 17:14:11 +0800</pubDate>
-    <lastBuildDate>Tue, 31 Mar 2015 17:14:11 +0800</lastBuildDate>
+    <pubDate>Tue, 19 May 2015 17:58:14 +0800</pubDate>
+    <lastBuildDate>Tue, 19 May 2015 17:58:14 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
-        <title>坑 of animation-play-state</title>
+        <title>animation-play-state</title>
         <description>&lt;p&gt;最近做移动端开发，经常都需要用到animation做一些动效，特别是那些高速回旋加速无限循环拉风装逼大气奢华360度喷气加速回旋动画，根本无法单靠transition来实现。&lt;/p&gt;
 
 &lt;!-- break --&gt;
 
-&lt;p&gt;马上打开百度，输入’animation css3’(当然不能被人发现用百度而不用google)。好了，看一下W3C就回想起这css属性怎样写了。&lt;/p&gt;
+&lt;p&gt;马上打开百度，输入「animation css3」。好了，看一下W3C就回想起这css属性怎样写了。&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.ass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;your&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ass&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;.5s&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;infinite&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;@-webkit-keyframes&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;move-your-ass&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -42,7 +42,7 @@
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;搞定，可是总有种不太可靠的感觉，试了一下发现了个问题。手指摸它的时候的确是动了，可是挪开手之后，整个屁股恢复到最开始的状态了，这不是我想要的，
-我要的是暂停而不是停止啊。咋整呢？马上再打开百度输入’animation css3’(当然不能被人发现用百度而不用google)，再看了下W3C，发现animation有
+我要的是暂停而不是停止啊。咋整呢？马上再打开百度输入「animation css3」，再看了下W3C，发现animation有
 一个属性长这个样子 &lt;code&gt;animation-play-state&lt;/code&gt; 有 &lt;code&gt;paused&lt;/code&gt; &lt;code&gt;running&lt;/code&gt; 两个值，貌似能用这货改变动画的状态。让我们来尝一下。&lt;/p&gt;
 
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;webkit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;animation&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;move&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;your&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ass&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;infinite&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;paused&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
@@ -60,10 +60,12 @@
     &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;class&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
+&lt;p&gt;完美！！&lt;/p&gt;
+
 </description>
         <pubDate>Mon, 23 Mar 2015 00:00:00 +0800</pubDate>
-        <link>http://yourdomain.com/web/2015/03/23/%E5%9D%91-of-animation-play-state.html</link>
-        <guid isPermaLink="true">http://yourdomain.com/web/2015/03/23/%E5%9D%91-of-animation-play-state.html</guid>
+        <link>http://yourdomain.com/web/2015/03/23/animation-play-state.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/web/2015/03/23/animation-play-state.html</guid>
         
         
         <category>web</category>
