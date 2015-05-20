@@ -192,6 +192,7 @@ i { font-style: normal; }
 .gooey-share-box.end .duang:nth-of-type(3) b { -webkit-animation-delay: .2s; }
 
 .wechat-qrcode { width: 100px; height: 100px; position: fixed; bottom: 60px; right: 200px; background: #fff; padding: 10px; -webkit-transition: bottom .4s; -moz-transition: bottom .4s; -ms-transition: bottom .4s; -o-transition: bottom .4s; transition: bottom .4s; }
+.wechat-qrcode.activated { bottom: 40px; }
 
 @media (max-width: 1200px) { .site-header .wrapper, .home-page { padding-right: 0; }
   .side-content { display: none; } }

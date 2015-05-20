@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="227311de-c153-4715-b4df-369f78354ae8" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_posts/2015-03-23-坑-of-animation-play-state.markdown" afterPath="$PROJECT_DIR$/_posts/2015-03-23-animation-play-state.markdown" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_layout.scss" afterPath="$PROJECT_DIR$/_sass/_layout.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/default.html" afterPath="$PROJECT_DIR$/_layouts/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/feed.xml" afterPath="$PROJECT_DIR$/_site/feed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/gooey.html" afterPath="$PROJECT_DIR$/_includes/gooey.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/about/index.html" afterPath="$PROJECT_DIR$/_site/about/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/pages/index/index.js" afterPath="$PROJECT_DIR$/js/pages/index/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/main.css" afterPath="$PROJECT_DIR$/_site/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sea.js" afterPath="$PROJECT_DIR$/js/sea.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angry-dylan.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_layout.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_layout.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_sass/_layout.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.0" vertical-offset="10194" max-vertical-offset="11550">
-              <caret line="718" column="14" selection-start-line="718" selection-start-column="14" selection-end-line="718" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.71910113" vertical-offset="10194" max-vertical-offset="11550">
+              <caret line="718" column="20" selection-start-line="718" selection-start-column="20" selection-end-line="718" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -100,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sea.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sea.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/sea.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8363636" vertical-offset="12240" max-vertical-offset="13080">
+            <state vertical-scroll-proportion="0.0" vertical-offset="12240" max-vertical-offset="13080">
               <caret line="862" column="23" selection-start-line="862" selection-start-column="23" selection-end-line="862" selection-end-column="23" />
               <folding />
             </state>
@@ -167,8 +157,8 @@
         <option value="$PROJECT_DIR$/js/pages/gooey/index.js" />
         <option value="$PROJECT_DIR$/js/sea.js" />
         <option value="$PROJECT_DIR$/js/pages/index/index.js" />
-        <option value="$PROJECT_DIR$/_sass/_layout.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/_sass/_layout.scss" />
       </list>
     </option>
   </component>
@@ -509,7 +499,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -859,14 +849,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.25" vertical-offset="105" max-vertical-offset="3540">
-          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_site/js/lib/zepto/zepto.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.76363635" vertical-offset="36240" max-vertical-offset="37065">
@@ -941,14 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.0" vertical-offset="10194" max-vertical-offset="11550">
-          <caret line="718" column="14" selection-start-line="718" selection-start-column="14" selection-end-line="718" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="800">
@@ -959,8 +933,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/sea.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8363636" vertical-offset="12240" max-vertical-offset="13080">
+        <state vertical-scroll-proportion="0.0" vertical-offset="12240" max-vertical-offset="13080">
           <caret line="862" column="23" selection-start-line="862" selection-start-column="23" selection-end-line="862" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_base.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="105" max-vertical-offset="3540">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71910113" vertical-offset="10194" max-vertical-offset="11550">
+          <caret line="718" column="20" selection-start-line="718" selection-start-column="20" selection-end-line="718" selection-end-column="20" />
           <folding />
         </state>
       </provider>
