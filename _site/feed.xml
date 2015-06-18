@@ -6,9 +6,53 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 May 2015 23:57:29 +0800</pubDate>
-    <lastBuildDate>Mon, 25 May 2015 23:57:29 +0800</lastBuildDate>
+    <pubDate>Thu, 18 Jun 2015 15:21:30 +0800</pubDate>
+    <lastBuildDate>Thu, 18 Jun 2015 15:21:30 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>如何用正确姿势刷新页面</title>
+        <description>&lt;p&gt;有时候我们在页面用js干了一些业务功能之后，需要马上更新页面数据。可是懒得一块块的局部更新，干脆直接刷新页面重头开始重新做人。&lt;/p&gt;
+
+&lt;!-- break --&gt;
+
+&lt;p&gt;然后刷新页面有两种方法可以实现：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;location&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;好像都能达到刷新的效果耶，到底用哪个好呢？天秤座程序猿要崩溃了！&lt;/p&gt;
+
+&lt;p&gt;在搞清楚这两个方法有什么区别之前，必须先知道两个http状态码：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;200 —- 成功发送请求并接收到正确返回结果&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;200(from cache) —- 使用本地缓存，不会发送任何请求到服务器&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;304 —- 协商缓存，发个请求问服务器这个文件有木有修改过，服务器说木有，然后使用本地缓存。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;一般一个需要缓存的文件第一次被访问时，返回200并同时会带上设置好缓存时间的http头信息，&lt;code&gt;Cache-Control&lt;/code&gt; 和 &lt;code&gt;Expires&lt;/code&gt;。那么这个文件就会在指定的时间内读取本地缓存而不会发送服务器请求，这时候的http状态就会是200(from cache)。如果过了缓存时间，就会进入协商缓存阶段，向服务器发送请求，如果文件并没有新版本，就会返回304告诉客户端安心继续使用本地缓存。还有一种情况会触发协商缓存，就是用户主动刷新页面，例如点击浏览器刷新按钮或者按F5(mac用户为command+r)。&lt;/p&gt;
+
+&lt;p&gt;简单来说，就像你小学的时候向同班女同学小红表白，小红返回200，表白成功，获得一名女朋友；当然，小红会带上头信息&lt;strong&gt;Cache-Control: max-age=一个学期，Expires: 新学期的第一天&lt;/strong&gt;。于是，在这个学期内任何时候约会小红都会得到200(from cache)状态。除非遇到二班的帅气学霸抢夺或者被老师家长发现早恋等等这些人为主动干预的状况，这时候就需要问小红有木有被修改，没有则返回304(not modified)；否则，就有可能返回301(被请求的资源已永久移动到新位置)或者直接返回404(Not Found)。当暑假过去，迎来新学期的第一天，发现资源已经过期，这时候就需要再次请求小红，最好的情况就是返回304，然后又可以安心使用一个学期了。不过根据不完全非正常统计结果得出，在新学期请求过期资源会有93.333333%几率得到各种301，400，401，402，403，404………&lt;/p&gt;
+
+&lt;p&gt;好了，说回刷新页面，现在要搞清两种方法的区别就很简单了。&lt;code&gt;location.href = location.href&lt;/code&gt;就相当于你在地址栏输入网址然后按enter，这样浏览器会认为这是正常的访问，保质期内的资源都会是200(from cache)；而&lt;code&gt;location.reload()&lt;/code&gt;就相当于用户主动刷新页面，浏览器就会怀疑自己本地的资源，跑去问服务器保质期是否正确。&lt;/p&gt;
+
+&lt;p&gt;所以，当想刷新页面是为了更新数据的话用&lt;code&gt;location.reload()&lt;/code&gt;比较保险，可是页面也会载入得比较慢；如果数据是用ajax拿的并带上了时间戳，那就不用担心有本地缓存了，放心使用&lt;code&gt;location.href = location.href&lt;/code&gt;。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 16 Jun 2015 00:00:00 +0800</pubDate>
+        <link>http://yourdomain.com/web/2015/06/16/how-to-refresh-a-page-in-the-right-way.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/web/2015/06/16/how-to-refresh-a-page-in-the-right-way.html</guid>
+        
+        
+        <category>web</category>
+        
+      </item>
     
       <item>
         <title>论愉快开发web手机端的可能性</title>
