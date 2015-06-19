@@ -6,7 +6,7 @@ define(function(require, exports, module) { 'use strict';
  * @category Utility
  */
 
-var $ = require('zepto');
+var util = require('util');
 
 
 function encode(name, value, encoder) {
@@ -25,12 +25,12 @@ return {
 	stringify: function(data, o) {
 		if (typeof data === 'string') { return data; }
 
-		o = $.extend({
+		o = util.extend({
 			encode: encodeURIComponent
 		}, o);
 
 		var result = [ ];
-		if ( $.isArray(data) ) {
+		if ( Array.isArray(data) ) {
 			data.forEach(function(d) {
 				result.push( encode(d.name, d.value, o.encode) );
 			});
@@ -105,7 +105,7 @@ return {
 	 * @return {String} 处理后的URL
 	 */
 	append: function(url, data, o) {
-		if ( !data || $.isPlainObject(data) || ($.isArray(data) && !data.length) ) {
+		if ( !data || util.isEmptyObject(data) || (Array.isArray(data) && !data.length) ) {
 			return url;
 		}
 

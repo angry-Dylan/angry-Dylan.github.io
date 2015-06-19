@@ -40,6 +40,13 @@ define(function(require, exports, module) {
         return target;
     }
 
+    function isEmptyObject(obj){
+        if (obj != null) {
+            for (var i in obj) { return false; }
+        }
+        return true;
+    }
+
     module.exports = {
         isFunction: function(value) { return toString.call(value) === '[object Function]'; },
         /**
@@ -56,6 +63,13 @@ define(function(require, exports, module) {
          * @return {Boolean} 待测变量是否Object类型
          */
         isObject: function(value) { return toString.call(value) === '[object Object]'; },
+        /**
+         * 检查变量是否为空的Object类型
+         * @method isObject
+         * @param {Any} value 待测变量
+         * @return {Boolean} 待测变量是否为空的Object类型
+         */
+        isEmptyObject: isEmptyObject,
         /**
          * 检查变量是否为undefined
          * @method isUndefined
