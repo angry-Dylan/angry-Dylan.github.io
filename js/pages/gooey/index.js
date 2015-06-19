@@ -32,7 +32,7 @@ define(function(require, exports, module) {
             url, rurl = encodeURIComponent(location.href),
             title = encodeURIComponent('Dylan\'s awesome blog'),
             content = encodeURIComponent($('title').text()),
-            img = '/images/dylan.svg',
+            img = location.origin + '/images/dylan.svg',
             data = {};
 
 
